@@ -1,20 +1,15 @@
-# spy-of-universe
+# Spy of Universe 
+sorry for AI type discription
+Hey! This is my project for the Hack Club Stardance challenge. It's a custom PCB that tracks space satellites (like the International Space Station) and flashes a smart LED whenever it flies overhead.
 
-An custom ESP32-based hardware controller engineered for real-time tracking of space systems and satellite constellations.
+### How it works:
+* An *ESP32 chip* connects to my phone's mobile hotspot.
+* It pings a space station API over the internet to grab live tracking math.
+* It shoots data out to a *SK6812 RGB LED* to light up when a satellite is passing right over my house.
 
-## 🚀 How It Works
-* **Microcontroller:** Powered by an ESP32-WROOM-32 module utilizing integrated Wi-Fi connectivity.
-* **Space Data Feed:** Syncs live with orbital coordinates via internet tracking tracking network APIs (like OpenNotify).
-* **Visual indicator:** Signals flyovers by driving an addressable **SK6812 RGB Smart LED** to dynamically change colors when a satellite passes overhead.
-
-## 🛠️ Hardware & Pin Configuration
-The circuit routing was designed inside KiCad with strict compliance for RF antenna clearance guidelines (Antenna Keep-Out Zone cleared):
-* **Pin 1 (GND):** Main system ground connection for the SK6812 LED.
-* **Pin 11 (GPIO23):** Dedicated digital signal trace carrying data instructions to the LED's **DIN** (Data Input) pin.
-* **Pin 2 (VDD/VCC):** Main system power rail routing 3.3V power safely to the LED housing.
-
-## 📂 Repository Contents
-* `stationspy.kicad_sch` - Core circuit diagram schematics.
-* `stationspy.kicad_pcb` - Complete, error-free physical circuit board layout file (Passed 0-error DRC check).
-* `*.gbr` & `*.drl` - Full factory Gerber fabrication and drill outputs ready for physical manufacturing.
+### The Files:
+* stationspy.kicad_pcb / sch - My KiCad project files and schematic layout.
+* Stardance_Tracker.ino - My Arduino firmware test code.
+* *.gbr / *.drl - All the factory Gerbers and drill data ready to send over to manufacturing.
+* bom.csv - The component listing spreadsheet.
 *
