@@ -16,4 +16,4 @@ THATS HOW MY PROJECT LOOK LIKE
 
 # CAD MODEL:
 I think its fine looking 
-*`station.spy`
+*`station.step`
